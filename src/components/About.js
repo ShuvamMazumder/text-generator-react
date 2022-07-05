@@ -6,7 +6,7 @@ export default function About() {
         backgroundColor: 'white',
         border: '1px solid white'
 })
-    const [btnText, setBtnText] = useState('enable dark mode')
+    const [btnText, setBtnText] = useState('Enable dark Mode')
 
         const toggleStyle = () =>{
             if(myStyle.color === 'black'){
@@ -14,16 +14,15 @@ export default function About() {
                     color: 'white',
                     backgroundColor: 'black',
                 })
-                setBtnText('enable light mode')
+                setBtnText('Enable Light mode');
             }
             
-        
         else{
             setMyStyle({
                 color: 'black',
                 backgroundColor: 'white'
             })
-            setBtnText('enable dark mode');
+            setBtnText('Enable Dark mode');
         }
     }
 
@@ -42,6 +41,7 @@ export default function About() {
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
+              style={myStyle}
             >
               Accordion Item #1
             </button>
@@ -73,6 +73,7 @@ export default function About() {
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
+              style={myStyle}
             >
               Accordion Item #2
             </button>
@@ -104,6 +105,7 @@ export default function About() {
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
+              style={myStyle}
             >
               Accordion Item #3
             </button>
@@ -128,7 +130,7 @@ export default function About() {
         </div>
       </div>
       <div className="container my-3">
-      <button onClick={toggleStyle} type="button" className="btn btn-dark">Enble dark Mode</button>
+      <button onClick={toggleStyle} type="button" className="btn btn-success">{btnText}</button>
       </div>
     </div>
     </>
